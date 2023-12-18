@@ -17,11 +17,8 @@ python main.py
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## References
-- [Genetic Algorithm](https://www.mathworks.com/help/gads/what-is-the-genetic-algorithm.html)
-- [Genetic Algorithm](https://en.wikipedia.org/wiki/Genetic_algorithm)
-- [Genetic Algorithm](https://www.geeksforgeeks.org/genetic-algorithms/)
-- [Genetic Algorithm](https://www.tutorialspoint.com/genetic_algorithms/genetic_algorithms_quick_guide.htm)
-- [Genetic Algorithm](https://www.sciencedirect.com/topics/computer-science/genetic-algorithm)
-- [Genetic Algorithm](https://www.sciencedirect.com/topics/computer-science/genetic-algorithm)
+- [Introduction to Genetic Algorithms](https://towardsdatascience.com/introduction-to-genetic-algorithms-including-example-code-e396e98d8bf3)
+- [Genetic Algorithm Implementation in Python](https://towardsdatascience.com/genetic-algorithm-implementation-in-python-5ab67bb124a6)
+- [Genetic Algorithm and its practicality in Machine Learning](https://towardsdatascience.com/genetic-algorithm-6aefd897f1ac)
 
 
