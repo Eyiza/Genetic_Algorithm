@@ -1,6 +1,21 @@
 """
-This file contains the evaluation phase of the genetic algorithm.
+    Genetic Algorithm Fitness Evaluation
+
+    This module evaluates the fitness of each chromosome in a population using a given binary-encoded genetic representation. 
+    It decodes the chromosomes, maps them to decimal values within specified boundaries, and calculates fitness based on a user-defined fitness function.
+
+    Parameters:
+    - population_matrix: Matrix representing the population's binary-encoded chromosomes.
+    - population_size: Number of chromosomes in the population.
+    - strings: Number of strings in each chromosome.
+    - gene: Number of genes/bytes in each string.
+    - fitness_function: String representation of the fitness function in terms of x1, x2, x3.
+    - boundary_range: List of tuples specifying the boundaries for each variable (x1, x2, x3).
+
+    Returns:
+    - fitness: Matrix containing the fitness value for each chromosome.
 """
+
 
 import numpy as np
 

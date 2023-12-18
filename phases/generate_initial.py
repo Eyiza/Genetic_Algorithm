@@ -1,4 +1,6 @@
 """
+    Genetic Algorithm: Generate Initial Population
+    
     This module provides a function to generate the initial population of chromosomes for a genetic algorithm.
 
     Function:
