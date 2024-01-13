@@ -26,9 +26,26 @@ All required packages are included in the requirements file.
 
 
 ## Usage
+To change the parameters of the genetic algorithm, open the `main.py` file and edit the following lines of code:
+```python
+# Genetic Algorithm Parameters
+fitness_function # Objective function
+boundary_range # The boundaries of each string
+num_generations # Number of generations
+population_size # Number of chromosomes in the population
+strings # Number of strings in each chromosome
+gene = 5 # Number of genes/bytes in each string
+```
+
+To run the genetic algorithm, execute the following command in the terminal:
 ```bash
 python main.py
 ```
+
+## Output
+After running the genetic algorithm, a plot image named `best_fitness_plot.png` will be created in the current working directory. This image illustrates the improvement of the best fitness over generations. <br>
+The best fitness and solution will also be printed to the terminal.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
