@@ -1,6 +1,7 @@
 from phases.generate_initial import generateInitialPopulation
 from phases.evaluation import evalation
 from phases.selection import selection
+from phases.crossover import crossover
 
 def main():
     fitness_function = "(4 * x1**2) + (2 * x1 * x2) + (x2 * x3) - (3 * x3**2)" 
@@ -17,14 +18,17 @@ def main():
     fitness = evalation(population_matrix, population_size, strings, gene, fitness_function, boundary_range)
     # print("fitness: ", fitness)
 
-    selected_chromosomes, best_index = selection(fitness)
+    selected_chromosomes, best_index, new_population_matrix = selection(fitness, population_matrix)
     best_solution = population_matrix[best_index] # Best solution found so far
     best_fitness = fitness[best_index] # Fitness of the initial best solution found so far
 
     # print("best_solution: ", best_solution)
     # print("best_fitness: ", best_fitness)
 
-
+    # Crossover
+    population_matrix = crossover(new_population_matrix, crossover_rate, strings, gene)
+    print("population_matrix: ", population_matrix)
+ 
     # while gen < num_generations:
     #     parents = evalation(population_matrix, population_size, strings, gene)
     #     gen += 1
