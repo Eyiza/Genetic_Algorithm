@@ -10,7 +10,7 @@
     - gene: Number of genes/bytes in each string.
 
     Returns:
-    - population_matrix: A 2D array representing the population of chromosomes after the crossover phase.
+    - new_population_matrix: A 2D array representing the population of chromosomes after the crossover phase.
 
 """
 
