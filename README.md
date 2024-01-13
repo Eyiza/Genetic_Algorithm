@@ -3,10 +3,27 @@
 ## Description
 The genetic algorithm is a method for solving both constrained and unconstrained optimization problems that is based on natural selection, the process that drives biological evolution. The genetic algorithm repeatedly modifies a population of individual solutions. At each step, the genetic algorithm selects individuals at random from the current population to be parents and uses them to produce the children for the next generation. Over successive generations, the population "evolves" toward an optimal solution. You can apply the genetic algorithm to solve a variety of optimization problems that are not well suited for standard optimization algorithms, including problems in which the objective function is discontinuous, nondifferentiable, stochastic, or highly nonlinear. 
 
+
 ## Installation
+
+1. **Virtual Environment** - This keeps your dependencies for each project separate and organized. 
+Initialize and activate a virtual environment using:
+```bash
+python -m venv env
+source env/bin/activate
+```
+
+Note - In Windows, the `env` does not have a `bin` directory. Therefore, you'd use the analogous command shown below:
+```bash
+env/Scripts/activate
+```
+
+2. **PIP Dependencies** - Once the virtual environment is setup and running, install the required dependencies by running:
 ```bash
 pip install -r requirements.txt
 ```
+All required packages are included in the requirements file. 
+
 
 ## Usage
 ```bash
@@ -22,3 +39,5 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 - [Genetic Algorithm and its practicality in Machine Learning](https://towardsdatascience.com/genetic-algorithm-6aefd897f1ac)
 
 
+## Author
+Precious Michael
