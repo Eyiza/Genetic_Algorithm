@@ -34,7 +34,7 @@ boundary_range # The boundaries of each string
 num_generations # Number of generations
 population_size # Number of chromosomes in the population
 strings # Number of strings in each chromosome
-gene = 5 # Number of genes/bytes in each string
+gene # Number of genes/bytes in each string
 ```
 
 To run the genetic algorithm, execute the following command in the terminal:
