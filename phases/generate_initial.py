@@ -20,8 +20,9 @@ import numpy as np
 
 def generateInitialPopulation(population_size, chromesome_length):
     # Generate mutation and crossover rates
-    mutation_rate = np.random.rand()
     crossover_rate = np.random.rand()
+    mutation_rate = np.random.uniform(0, 0.5) # Mutation rate is usually set to a low value
+
 
     # Generate a population of random binary numbers
     population = np.random.randint(0, 2, size=(population_size, chromesome_length))    
