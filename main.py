@@ -4,6 +4,8 @@ from phases.selection import selection
 from phases.crossover import crossover
 from phases.mutation import mutation
 
+import matplotlib.pyplot as plt
+
 def main():
     # Parameters
     fitness_function = "(4 * x1**2) + (2 * x1 * x2) + (x2 * x3) - (3 * x3**2)" 
@@ -13,6 +15,10 @@ def main():
     strings = 3 # Number of strings in each chromosome
     gene = 5 # Number of genes/bytes in each string
     chromesome_length = strings * gene # Number of genes/bytes in each chromosome
+
+    # Initialize lists to store data for plotting
+    generation_list = []
+    best_fitness_list = []
 
     # Initial Generation i.e gen = 0 
     print("Initial Generation")
@@ -24,6 +30,11 @@ def main():
     best_solution = population_matrix[best_index] # Best solution found so far
     best_fitness = fitness[best_index] # Fitness of the best solution found so far
 
+    # Store initial data for plotting
+    generation_list.append(0)
+    best_fitness_list.append(best_fitness)
+
+    # Loop through the number of generations
     for gen in range(1, num_generations + 1):
         print("Generation: ", gen)
 
@@ -46,7 +57,21 @@ def main():
             best_solution = population_matrix[best_index]
             best_fitness = fitness[best_index]
 
+        # Store data for plotting
+        generation_list.append(gen)
+        best_fitness_list.append(best_fitness)
 
+    # Plot the best fitness found so far
+    plt.plot(generation_list, best_fitness_list, marker='o', color='blue')
+    plt.xlabel("Generation")
+    plt.ylabel("Best Fitness")
+    plt.title("Best Fitness Over Generation")
+    plt.grid(True)
+
+    # Save the plot
+    plt.savefig("best_fitness_plot.png")
+
+    # Print the best solution found so far
     print("best_solution: ", best_solution)
     print("best_fitness: ", best_fitness)
 
