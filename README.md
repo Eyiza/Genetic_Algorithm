@@ -43,8 +43,14 @@ python main.py
 ```
 
 ## Output
-After running the genetic algorithm, a plot image named `best_fitness_plot.png` will be created in the current working directory. This image illustrates the improvement of the best fitness over generations. <br>
-The best fitness and solution will also be printed to the terminal.
+After running the genetic algorithm, a plot image named `best_fitness_plot.png` will be created in the current working directory. This image illustrates the improvement of the best fitness over generations. 
+![Best Fitness Plot](best_fitness_plot.png)
+
+The best fitness and solution will also be printed to the terminal. An example is shown below:
+```
+Best Solution: [1 1 1 1 1 1 1 1 1 0 0 0 0 1 0]
+Best Fitness:  [86.41935484]
+```
 
 
 ## Contributing

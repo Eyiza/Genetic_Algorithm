@@ -72,8 +72,8 @@ def main():
     plt.savefig("best_fitness_plot.png")
 
     # Print the best solution found so far
-    print("best_solution: ", best_solution)
-    print("best_fitness: ", best_fitness)
+    print("Best Solution: ", best_solution)
+    print("Best Fitness: ", best_fitness)
 
 if __name__ == "__main__":
     main()
