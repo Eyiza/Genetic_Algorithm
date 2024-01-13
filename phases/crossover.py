@@ -27,7 +27,7 @@ def crossover(population_matrix, crossover_rate, strings, gene ):
         # Select two random indices for crossover pair
         parent_indices = np.random.choice(population_size, size=2, replace=False)
 
-        print("parent_indices: ", parent_indices)
+        # print("parent_indices: ", parent_indices)
 
         # Get the chromosomes for crossover
         parent1 = population_matrix[parent_indices[0]]
@@ -35,10 +35,10 @@ def crossover(population_matrix, crossover_rate, strings, gene ):
 
         # Check if crossover should be performed based on the crossover rate
         if np.random.rand() < crossover_rate:
-            print("Crossover performed")
+            # print("Crossover performed")
             # Select a random crossover point
             crossover_point = np.random.randint(1, gene)
-            print("crossover_point: ", crossover_point)
+            # print("crossover_point: ", crossover_point)
 
             # Get the index of the crossover point for each string
             cross_point = gene - crossover_point
@@ -57,7 +57,7 @@ def crossover(population_matrix, crossover_rate, strings, gene ):
         
         else: 
             # If crossover is not performed, then the parents are copied into the new population
-            print("Crossover not performed")
+            # print("Crossover not performed")
             new_population_matrix[i * 2] = parent1
             new_population_matrix[i * 2 + 1] = parent2
 

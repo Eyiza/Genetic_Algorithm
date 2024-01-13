@@ -50,4 +50,4 @@ def selection(fitness, population_matrix):
     # Create a new population matrix with the selected chromosomes
     new_population_matrix = np.array(population_matrix[selected_chromosomes])
 
-    return selected_chromosomes, best_index, new_population_matrix
+    return best_index, new_population_matrix

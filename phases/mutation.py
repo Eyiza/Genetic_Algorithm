@@ -27,7 +27,7 @@ def mutation(population_matrix, mutation_rate, strings, gene):
         # Select two random indices for mutation pair
         parent_indices = np.random.choice(population_size, size=2, replace=False)
 
-        print("parent_indices: ", parent_indices)
+        # print("parent_indices: ", parent_indices)
 
         # Get the chromosomes for mutation
         parent1 = population_matrix[parent_indices[0]]
@@ -38,10 +38,10 @@ def mutation(population_matrix, mutation_rate, strings, gene):
 
         # Check if mutation should be performed based on the mutation rate
         if np.random.rand() < mutation_rate:
-            print("Mutation performed")
+            # print("Mutation performed")
             # Select a random mutation point
             mutation_point = np.random.randint(1, gene)
-            print("mutation_point: ", mutation_point)
+            # print("mutation_point: ", mutation_point)
 
             # Get the index of the mutation point for each string
             mutate_point = gene - mutation_point
@@ -54,8 +54,17 @@ def mutation(population_matrix, mutation_rate, strings, gene):
 
                 mutate_point += gene
 
-        else:
+        # else:
             # If mutation is not performed, then the parents are copied into the new population
-            print("Mutation not performed")
+            # print("Mutation not performed")
+
+    # Check if the number of chromosomes is odd
+    if population_size % 2 != 0:
+        print("Odd number of chromosomes")
+        # Select a random index for the last chromosome
+        last_index = np.random.randint(0, population_size)
+        print("last_index: ", last_index)
+        # Copy the last chromosome into the new population
+        new_population_matrix[- 1] = population_matrix[last_index]
 
     return new_population_matrix
