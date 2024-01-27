@@ -18,7 +18,7 @@ import numpy as np
 from collections import Counter
 
 def selection(fitness, population_matrix):
-    populaion_size = len(fitness)
+    population_size = len(fitness)
     if min(fitness) < 0:
         fitness = fitness + abs(min(fitness))
 
@@ -28,14 +28,14 @@ def selection(fitness, population_matrix):
     total_fitness = np.sum(fitness)
 
     # Generate random numbers between 0 and 1 for the roulette wheel
-    random_numbers = np.random.random_sample(populaion_size)
+    random_numbers = np.random.random_sample(population_size)
 
     # Select the chromosomes that corresponds to the random number based on the cumulative fitness
     selected_chromosomes = []
     
     for number in random_numbers:
         random_number = number * total_fitness
-        for i in range(populaion_size):
+        for i in range(population_size):
             if random_number < cumulative_fitness[i]:
                 selected_chromosomes.append(i)
                 break
